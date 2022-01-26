@@ -1,6 +1,7 @@
 // components
 export * from "./components/navbar/navbar";
 export * from "./components/headers/carousel";
+export * from "./components/svg/spinner";
 
 // partials
 export * from "./partials/part-couple";
