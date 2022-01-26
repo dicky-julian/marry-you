@@ -1,6 +1,17 @@
 import React from "react";
+import { PageContext } from "../../pages";
+import { actionTypes } from "../../config/store";
 
 export const PartEvent = () => {
+  const { dispatch } = React.useContext(PageContext);
+
+  const onIndexLocationChange = (index) => {
+    dispatch({
+      type: actionTypes.SET_INDEX_LOCATION,
+      payload: index,
+    });
+  };
+
   return (
     <section id="events" className="events">
       <div className="events-content">
@@ -25,7 +36,10 @@ export const PartEvent = () => {
               </div>
             </div>
             <a href="#locations">
-              <button className="btn btn-primary font-cormorant">
+              <button
+                className="btn btn-primary font-cormorant"
+                onClick={() => onIndexLocationChange(0)}
+              >
                 View Map
               </button>
             </a>
@@ -49,7 +63,7 @@ export const PartEvent = () => {
                 <p>Jl. Letjen Jamin Ginting No. 970/940, Beringin - Medan</p>
               </div>
             </div>
-            <a href="#locations">
+            <a href="#locations" onClick={() => onIndexLocationChange(1)}>
               <button className="btn btn-primary font-cormorant">
                 View Map
               </button>

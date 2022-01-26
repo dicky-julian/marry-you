@@ -18,7 +18,7 @@ export const PartMoment = () => {
           ></div>
           <div
             className="moments-grid-img"
-            style={{ backgroundImage: "url(img/couples/moments_3.webp)" }}
+            style={{ backgroundImage: "url(img/couples/moments_11.webp)" }}
           ></div>
           <div
             className="moments-grid-img"

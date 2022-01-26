@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import { PageContext } from "../../../pages";
 
 const settings = {
   infinite: true,
@@ -11,19 +12,27 @@ const settings = {
   dots: false,
 };
 
+const landscapeBackground = ["header_1.webp", "header_2.webp", "header_3.webp"];
+
+const portraitBackground = [
+  "couples/moments_2.webp",
+  "couples/moments_9.webp",
+  "couples/moments_10.webp",
+];
+
 export const HeaderCarousel = () => {
+  const { state } = React.useContext(PageContext);
+  const { isPortrait } = state;
   return (
     <header className="header">
       <Slider {...settings}>
-        <div className="header-item">
-          <img src="img/header_1.webp" />
-        </div>
-        <div className="header-item">
-          <img src="img/header_2.webp" />
-        </div>
-        <div className="header-item">
-          <img src="img/header_3.webp" />
-        </div>
+        {(isPortrait ? portraitBackground : landscapeBackground).map(
+          (pathname, index) => (
+            <div className="header-item" key={`${index}-${pathname}`}>
+              <img src={`img/${pathname}`} />
+            </div>
+          )
+        )}
       </Slider>
       <div className="header-overlay"></div>
       <div className="header-body">

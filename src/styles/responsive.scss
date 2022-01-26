@@ -26,6 +26,21 @@
   }
 }
 
+@media screen and (min-width: 901px) {
+  .moments {
+    &-grid {
+      &-img {
+        &:nth-child(1) {
+          background-position: center 30%;
+        }
+        &:nth-child(6) {
+          background-position: center 56%;
+        }
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 900px) {
   .couples {
     &-content {
@@ -217,31 +232,11 @@
     .cover-footer {
       height: 17.5vh;
     }
-    .cover-header {
-      .cover-title {
-        width: 100%;
-        display: flex;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        h2 {
-          margin: 0;
-          font-size: 2rem;
-          letter-spacing: 3px;
-        }
-        h5 {
-          margin: 0.5rem 0 0;
-          font-size: 1.25rem;
-          letter-spacing: 1px;
-          color: #008000;
-        }
-        h6 {
-          margin: 0;
-          font-size: 1rem;
-        }
-      }
-    }
+    // .cover-header {
+    //   .cover-title {
+
+    //   }
+    // }
     .cover-footer {
       .btn-ghost {
         padding: 0.75rem 1.25rem !important;
@@ -292,6 +287,10 @@
       padding-bottom: 375px;
       .couples-profile {
         top: 325px;
+        &-pict {
+          width: 180px;
+          height: 180px;
+        }
       }
     }
   }
@@ -326,6 +325,11 @@
       img {
         object-position: 30% 0;
       }
+    }
+  }
+  .react-tabs {
+    &__tab-panel {
+      height: 400px;
     }
   }
 }

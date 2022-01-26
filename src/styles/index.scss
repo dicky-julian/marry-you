@@ -3,6 +3,7 @@
 $bg-primary: #c1eabe;
 $bg-primary-dark: #325800;
 $bg-fade: #818491;
+$bg-fade-dark: rgba(42, 42, 42, 0.165);
 
 * {
   font-family: "Hind", serif;
@@ -17,7 +18,7 @@ body {
 }
 
 hr {
-  border-color: rgb(42, 42, 42, 0.07);
+  border-color: $bg-fade-dark;
 }
 
 .btn {
@@ -73,7 +74,7 @@ hr {
 
 .form-input {
   width: -webkit-fill-available;
-  border: 1px solid rgb(42, 42, 42, 0.07);
+  border: 1px solid $bg-fade-dark;
   padding: 0.75rem 1rem;
   border-radius: 4px;
   font-size: 1rem;
@@ -180,7 +181,7 @@ main {
 section {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 80vh;
   > div {
     width: 100%;
     max-width: 1150px;
@@ -203,7 +204,6 @@ section {
 }
 
 .couples {
-  display: flex;
   background-size: inherit;
   background-repeat: repeat;
   background-position: center;
@@ -238,7 +238,8 @@ section {
       overflow: hidden;
       text-align: center;
       &-pict {
-        width: 65%;
+        width: 220px;
+        height: 220px;
         border-radius: 50%;
       }
       .img-figure {
@@ -307,6 +308,7 @@ section {
       padding: 50px 25px;
       background-color: #fff;
       box-shadow: 0 0 15px 0 rgb(0 0 0 / 5%);
+      border: 1px solid rgba(42, 42, 42, 0.07);
       text-align: center;
       > img {
         height: 65px;
@@ -368,7 +370,7 @@ section {
   }
   &__tab-panel {
     margin-top: 1.5rem;
-    height: 90vh;
+    height: 600px;
     background-color: #fff;
     padding: 5px;
     border-radius: 4px;
@@ -397,6 +399,12 @@ section {
         width: calc(50% - 10px);
         height: unset;
         padding-top: unset;
+      }
+      &:nth-child(2) {
+        background-position: center 25%;
+      }
+      &:nth-child(5) {
+        background-position: center 40%;
       }
     }
   }
@@ -459,7 +467,7 @@ section {
     &-cover {
       width: 400px;
       height: 500px;
-      border: 1px solid #ebebeb;
+      border: 1px solid $bg-fade-dark;
       padding: 20px;
       img {
         width: inherit;
@@ -624,6 +632,7 @@ section {
   height: 60px;
   background-color: #fff;
   border-radius: 50%;
+  border: 1px solid $bg-fade-dark;
   box-shadow: 2px 2px 30px rgb(0 0 0 / 10%);
   position: fixed;
   right: 15px;
@@ -658,7 +667,7 @@ section {
     &-footer {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       height: 15vh;
       position: relative;
       box-shadow: 0 20px 25px -5px rgb(0 0 0/0.1),
@@ -694,7 +703,26 @@ section {
     }
     &-header {
       .cover-title {
-        display: none;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        h2 {
+          margin: 0;
+          font-size: 2rem;
+          letter-spacing: 3px;
+        }
+        h5 {
+          margin: 0.5rem 0 0;
+          font-size: 1.25rem;
+          letter-spacing: 1px;
+          color: #008000;
+        }
+        h6 {
+          margin: 0;
+          font-size: 1rem;
+        }
       }
     }
     &-body {
@@ -731,12 +759,12 @@ section {
     &.--left {
       right: 0;
       background-position: right;
-      background-image: url("http://localhost:3000/img/section-5.png");
+      background-image: url("https://rhesa-oriettha.web.app/img/section-5.png");
     }
     &.--right {
       left: 0;
       background-position: left;
-      background-image: url("http://localhost:3000/img/section-4.png");
+      background-image: url("https://rhesa-oriettha.web.app/img/section-4.png");
     }
   }
   &--open {

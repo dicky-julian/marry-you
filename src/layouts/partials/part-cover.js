@@ -23,10 +23,12 @@ export const PartCover = () => {
             indexPage === 2 ? "cover-title--fade" : ""
           }`}
         >
-          <h1 className="font-cormorant">The Wedding</h1>
-          <h6>Celebration</h6>
+          {/* <h1 className="font-cormorant">The Wedding</h1>
+          <h6>Celebration</h6> */}
           <span className="name-tag name-tag-latter">R</span>
-          <span className="name-tag name-tag-connector">&</span>
+          {!isOpenCover && (
+            <span className="name-tag name-tag-connector">&</span>
+          )}
           <span className="line-decoration"></span>
         </div>
       </div>
