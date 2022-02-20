@@ -40,7 +40,7 @@ export const HeaderCarousel = () => {
         <span className="font-primary">&</span>
         <h1>Oriettha</h1>
         <h2 className="font-primary">Are Getting Married</h2>
-        <h3 className="font-primary">04 September 2021</h3>
+        <h3 className="font-primary">26 Maret 2022</h3>
       </div>
     </header>
   );

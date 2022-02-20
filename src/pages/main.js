@@ -9,6 +9,7 @@ import {
   PartProverb,
   PartGift,
   PartWishes,
+  PartProtocol
 } from "../layouts";
 
 const MainPage = () => {
@@ -22,6 +23,7 @@ const MainPage = () => {
       <PartMoment />
       <PartProverb />
       <PartGift />
+      <PartProtocol />
       <PartWishes />
     </>
   );

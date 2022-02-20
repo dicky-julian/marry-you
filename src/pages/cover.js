@@ -45,8 +45,8 @@ const CoverPage = () => {
       <div className="cover-page-content">
         <div className="cover-header">
           <div className="cover-title">
-            <h2 className="font-great-vibes">Rhesa & Oriettha</h2>
             {invitedName && <h6>Dear {invitedName}</h6>}
+            <h2 className="font-great-vibes">Rhesa & Oriettha</h2>
           </div>
         </div>
         <div className="cover-body">

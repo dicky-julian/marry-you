@@ -527,6 +527,47 @@ section {
   transition: height 200ms;
 }
 
+
+.protocol {
+  background-color: #f5f3eb;
+  .protocol-content > h3 {
+    margin-top: -15px
+  }
+  &-box {
+    background-color: white;
+    width: calc(100% - 500px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px;
+    .row {
+      display: flex;
+      flex-flow: row;
+      justify-content: space-evenly;
+      margin-bottom: 5px;
+      .col {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        display: inline-block;
+        .img-symbols {
+          width: 100px;
+          height:70px;
+          margin-bottom: 10px;
+          justify-content: center;
+        }
+        p {
+          margin-top: -10px;
+          display: block;
+          max-width: 100px;
+        }
+      }
+    }
+
+  }
+}
+
 .wishes {
   background-color: #ddf3db;
   height: 500px;

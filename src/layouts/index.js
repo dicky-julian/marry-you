@@ -12,3 +12,4 @@ export * from "./partials/part-proverb";
 export * from "./partials/part-gift";
 export * from "./partials/part-wishes";
 export * from "./partials/part-cover";
+export * from "./partials/part-protocol";

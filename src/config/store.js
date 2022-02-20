@@ -2,7 +2,7 @@ export const initialState = {
   isOpenCover: false,
   isPortrait: false,
   indexPage: 1,
-  indexLocation: 1,
+  indexLocation: 0,
 };
 
 export const actionTypes = {

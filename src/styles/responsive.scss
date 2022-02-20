@@ -115,6 +115,11 @@
       }
     }
   }
+  .protocol {
+    &-box {
+      width: calc(100% - 30px)
+    }
+  }
   .part-cover {
     .cover-title {
       h1 {
@@ -196,6 +201,11 @@
         height: calc(75vw - 50px);
         min-height: 225px;
       }
+    }
+  }
+  .protocol {
+    &-box {
+      width: 100%
     }
   }
   .gift {
