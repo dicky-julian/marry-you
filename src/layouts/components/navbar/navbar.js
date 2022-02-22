@@ -1,19 +1,26 @@
 import React, { useEffect, useState } from "react";
 
 const useAudio = (url) => {
+
   const [audio] = useState(new Audio(url));
   const [playing, setPlaying] = useState(true);
+
+  // audio.autoplay = true
 
   const toggle = () => setPlaying(!playing);
 
   useEffect(() => {
-    playing ? audio.play() : audio.pause();
+    playing ? audio.play() : audio.pause() 
   }, [playing]);
 
   useEffect(() => {
     audio.addEventListener("ended", () => setPlaying(true));
+    window.addEventListener('touchstart', () => {
+      audio.play()
+    })
     return () => {
       audio.removeEventListener("ended", () => setPlaying(false));
+      audio.removeEventListener('touchstart',() => audio.pause())
     };
   }, []);
 
