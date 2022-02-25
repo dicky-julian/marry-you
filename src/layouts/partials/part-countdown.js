@@ -7,7 +7,7 @@ export const PartCountDown = () => {
             <img className="img-figure" src="img/section-2.webp" />
             <img className="img-figure" src="img/section-2.webp" />
             <div className="countdown-content">
-                <h3 className='font-primary-dark font-great-vibes'>Counting Down to the big day</h3>
+                <h3 className='font-great-vibes'>Counting Down to the big day</h3>
                 <CountdownTimer />
             </div>
         </section>

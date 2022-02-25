@@ -19,8 +19,6 @@ const CountdownTimer = () => {
 
   const boxTimer = (time, text) => {
     const checkPlural = (time) => {
-        console.log(time,'this is time')
-        console.log(text,'this is text')
         return time > 1 ? text : text.slice(0, -1);
     };
 

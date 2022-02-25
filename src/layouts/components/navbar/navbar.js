@@ -5,7 +5,7 @@ const useAudio = (url) => {
   const [audio] = useState(new Audio(url));
   const [playing, setPlaying] = useState(true);
 
-  // audio.autoplay = true
+  audio.autoplay = true
 
   const toggle = () => setPlaying(!playing);
 

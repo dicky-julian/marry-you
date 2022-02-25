@@ -21,6 +21,7 @@ const CoverPage = () => {
   };
 
   const handleEnterInvitation = () => {
+    console.log("Is")
     handleOpenCover(false);
     setTimeout(() => {
       handleMovePage(2);
@@ -42,24 +43,26 @@ const CoverPage = () => {
 
   return (
     <div className="cover-page">
-      <div className="cover-page-content">
-        <div className="cover-header">
-          <div className="cover-title">
-            {invitedName && <h6>Dear {invitedName}</h6>}
-            <h2 className="font-great-vibes">Rhesa & Oriettha</h2>
+      <div className="cover-page-overlay">
+        <div className="cover-page-content">     
+          <div className="cover-body">
           </div>
-        </div>
-        <div className="cover-body">
-          <img src="img/header_2.webp" />
-        </div>
-        <div className="cover-footer">
-          <div>
-            <button className="btn-ghost" onClick={handleEnterInvitation}>
-              <span className="psuedo-text">
-                <img src="img/icons/icon-heart.png" />
-                Buka Undangan
-              </span>
-            </button>
+          <div className="cover-header">
+            <div className="cover-title">
+              {invitedName && <h6><b>Dear {invitedName}</b></h6>}
+              <h6 className="greetings">We invite you to celebrate The Wedding of</h6>
+              <h2 className="font-great-vibes">Rhesa & Oriettha</h2>
+            </div>
+          </div>
+          <div className="cover-footer">
+            <div>
+              <button className="btn-ghost" onClick={handleEnterInvitation}>
+                <span className="psuedo-text">
+                  <img src="img/icons/icon-heart.png" />
+                  Open Invitation
+                </span>
+              </button>
+            </div>
           </div>
         </div>
       </div>

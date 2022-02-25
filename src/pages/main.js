@@ -18,10 +18,10 @@ const MainPage = () => {
     <>
       <Navbar />
       <HeaderCarousel />
-      <PartCountDown />
       <PartCouple />
       <PartEvent />
       <PartLocation />
+      <PartCountDown />
       <PartMoment />
       <PartProverb />
       <PartGift />
