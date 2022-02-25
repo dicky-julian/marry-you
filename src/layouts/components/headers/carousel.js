@@ -39,10 +39,11 @@ export const HeaderCarousel = () => {
       </Slider>
       <div className="header-overlay"></div>
       <div className="header-body">
-        <h1>Rhesa</h1><span className="font-primary">&</span><h1>Oriettha</h1>
-        <h3 className="font-primary font-cormorant">We Are Getting Married</h3>
-        <h3 className="font-primary font-cormorant">March 26<sup className="font-cormorant">th</sup> 2022</h3>
-        <CountdownTimer />
+        <h3 className="font-primary">We Are Getting Married</h3>
+        {/* <h1>Rhesa</h1><span className="font-primary">&</span><h1>Oriettha</h1> */}
+        <h1>Rhesa & Oriettha</h1>
+        <h3 className="font-primary font-cormorant font-date">March 26<sup className="font-cormorant">th</sup> 2022</h3>
+        {/* <CountdownTimer /> */}
       </div>
     </header>
   );

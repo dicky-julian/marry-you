@@ -9,7 +9,8 @@ import {
   PartProverb,
   PartGift,
   PartWishes,
-  PartProtocol
+  PartProtocol,
+  PartCountDown
 } from "../layouts";
 
 const MainPage = () => {
@@ -17,6 +18,7 @@ const MainPage = () => {
     <>
       <Navbar />
       <HeaderCarousel />
+      <PartCountDown />
       <PartCouple />
       <PartEvent />
       <PartLocation />

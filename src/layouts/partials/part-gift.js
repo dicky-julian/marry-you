@@ -30,21 +30,17 @@ export const PartGift = () => {
               <div className="bank-list-items">
                 <img src="img/icons/bank-mandiri.webp" />
                 <p>
-                  <b>Bank Mandiri</b>
-                  <br />
                   9000023105670
                   <br />
-                  a.n Rhesa Daiva Bremana
+                  a.n. Rhesa Daiva Bremana
                 </p>
               </div>
               <div className="bank-list-items">
                 <img src="img/icons/bank-bni.webp" />
                 <p>
-                  <b>BNI</b>
-                  <br />
                   0454534219
                   <br />
-                  a.n Oriettha Deany
+                  a.n. Oriettha Deany
                 </p>
               </div>
             </div>

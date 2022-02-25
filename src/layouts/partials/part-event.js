@@ -15,6 +15,7 @@ export const PartEvent = () => {
   return (
     <section id="events" className="events">
       <div className="events-content">
+      <img className="img-figure" src="img/section-3.webp" />
         <h3 className="font-great-vibes">Wedding Events</h3>
         <div className="events-info">
           <div className="events-info-pemberkatan">
@@ -23,7 +24,7 @@ export const PartEvent = () => {
             <div className="events-info-list">
               <img src="img/icons/icon-time.webp" />
               <div>
-                <p>Sabtu, 04 September 2021</p>
+                <p>Sabtu, 26 Maret 2022</p>
                 <p>08.00 WIB</p>
               </div>
             </div>
@@ -51,8 +52,8 @@ export const PartEvent = () => {
             <div className="events-info-list">
               <img src="img/icons/icon-time.webp" />
               <div>
-                <p>Sabtu, 04 September 2021</p>
-                <p>08.00 WIB</p>
+                <p>Sabtu, 26 Maret 2022</p>
+                <p>11.00 WIB</p>
               </div>
             </div>
             <hr />

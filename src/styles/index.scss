@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Great+Vibes&family=Hind&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant&family=Great+Vibes&family=Hind&family=Moon+Dance&display=swap");
 
 $bg-primary: #c1eabe;
 $bg-primary-dark: #325800;
@@ -97,6 +97,10 @@ hr {
   font-family: "Cormorant", serif;
 }
 
+.font-moon-dance {
+  font-family: 'Moon Dance', cursive;
+}
+
 .font-primary {
   color: $bg-primary;
   &-dark {
@@ -148,46 +152,14 @@ main {
     align-items: center;
     justify-content: center;
     margin-top: 1rem;
-    .countdown-timer {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      .time-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 2rem;
-        width: 105px;
-        height: 105px;
-        color: #2d2d2d;
-        background-color: #fefefe80;
-        margin-right: 8px;
-        border-radius: 30px;
-        &-number {
-          color: #e6e6e6;
-          font-size: 2.5rem;
-          margin-top: -10%;
-          // @extend .font-cormorant
-        }
-        &-text {
-          font-size: 25px;
-          margin-top: -10px;
-          align-items: center;
-          color: #e6e6e6;
-          @extend .font-cormorant
-        }
-
-      }
-    }
-   
     h1 {
-      margin: 0;
-      font-size: 5.5rem;
+      margin-top: -30px;
+      // display: flex;
+      // justify-content: center;
+      text-align: center;
+      font-size: 3rem !important;
       color: #fff;
-      letter-spacing: 7px;
-      @extend .font-great-vibes;
+      @extend .font-moon-dance
     }
     h2 {
       margin: 2rem 0 0.5rem;
@@ -195,12 +167,15 @@ main {
       @extend .font-cormorant;
     }
     h3 {
-      margin: 0;
-      font-size: 1.75rem;
+      margin-top: 45vh;
+      font-size: 1.5rem;
       font-weight: normal;
     }
+    h3.font-date {
+      margin-top:-30px !important
+    }
     span {
-      font-size: 4rem;
+      font-size: 2rem;
       &::before,
       &::after {
         content: "";
@@ -329,8 +304,71 @@ section {
   }
 }
 
+.countdown {
+  position: relative;
+  overflow: hidden;
+  &-content {
+    margin-left: auto;
+    margin-right: auto;
+    .countdown-timer {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top:100px;
+      .time-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        width: 115px;
+        height: 115px;
+        color: #2d2d2d;
+        background-color: #f7a840a6;
+        margin-right: 15px;
+        border-radius: 30px;
+        &-number {
+          color: #333333;
+          font-size: 2.5rem;
+          margin-top: -10%;
+          // @extend .font-cormorant
+        }
+        &-text {
+          font-size: 25px;
+          margin-top: -10px;
+          align-items: center;
+          color: #333333;
+          @extend .font-cormorant
+        }
+      }
+    }
+  }
+  > img {
+    position: absolute;
+    width: 250px;
+    &:nth-child(1) {
+      bottom: -75px;
+      left: -100px;
+      transform: rotate(-90deg);
+    }
+    &:nth-child(2) {
+      bottom: -75px;
+      right: -100px;
+    }
+  }
+}
+
 .events {
+  position: relative;
+  overflow: hidden;
   background-color: #fff;
+  .img-figure {
+    position: absolute;
+    width: 350px;
+    bottom: 0;
+    right: 0;
+  }
   &-info {
     display: flex;
     justify-content: center;

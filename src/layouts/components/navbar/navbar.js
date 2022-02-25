@@ -15,12 +15,12 @@ const useAudio = (url) => {
 
   useEffect(() => {
     audio.addEventListener("ended", () => setPlaying(true));
-    window.addEventListener('touchstart', () => {
-      audio.play()
-    })
+    // window.addEventListener('touchstart', () => {
+    //   audio.play()
+    // })
     return () => {
       audio.removeEventListener("ended", () => setPlaying(false));
-      audio.removeEventListener('touchstart',() => audio.pause())
+      // audio.removeEventListener('touchstart',() => audio.pause())
     };
   }, []);
 
@@ -29,7 +29,7 @@ const useAudio = (url) => {
 
 export const Navbar = () => {
   const [indexScroll, setIndexScroll] = useState(1);
-  const [playing, toggle] = useAudio("/audio/audio.mp3");
+  const [playing, toggle] = useAudio("/audio/audio_2.mp3");
 
   const handleScroll = () => {
     setIndexScroll(window.pageYOffset);
