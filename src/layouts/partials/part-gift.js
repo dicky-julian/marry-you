@@ -4,14 +4,11 @@ import { Collapse } from "react-collapse";
 export const PartGift = () => {
   const [isOpenGift, setIsOpenGift] = useState(false);
 
-  const handleCopy = (e) => {
-      e.preventDefault();
-      
-      navigator.clipboard.writeText(e.target.innerText).then(() => {
+  const handleCopy = (value) => {
+      navigator.clipboard.writeText(value).then(() => {
         console.log('OK')
       }).catch((error) => {
-        console.log("error", error.message);
-        // alert(error.message)
+        console.log("error", error.message)
       })
   }
 
@@ -41,21 +38,21 @@ export const PartGift = () => {
             <div className="bank-list">
               <div className="bank-list-items">
                 <img src="img/icons/bank-mandiri.webp" />
-                <p onClick={handleCopy}>
+                <p>
                   9000023105670
-                </p>
-                  <p>
+                  <br />
                   a.n. Rhesa Daiva Bremana
                 </p>
+                 <button className="btn btn-primary" onClick={()=>{handleCopy('9000023105670')}}>Copy Text</button>
               </div>
               <div className="bank-list-items">
                 <img src="img/icons/bank-bni.webp" />
-                <p onClick={handleCopy}>
+                <p>
                   0454534219
-                  </p>
-                  <p>
+                  <br />
                   a.n. Oriettha Deany
                 </p>
+                <button className="btn btn-primary" onClick={()=>{handleCopy('0454534219')}}>Copy Text</button>
               </div>
             </div>
           </Collapse>

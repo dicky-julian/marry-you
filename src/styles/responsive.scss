@@ -371,6 +371,13 @@
      }
    }
   }
+  .thankyou {
+    &-content {
+      h1 {
+        font-size: 3.3rem;
+      }
+    }
+  }
   .react-tabs {
     &__tab-panel {
       height: 400px;
