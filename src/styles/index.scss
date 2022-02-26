@@ -308,6 +308,8 @@ section {
 .countdown {
   position: relative;
   overflow: hidden;
+  // height: 50%;
+  min-height: 35vh !important;
   &-content {
     margin-left: auto;
     margin-right: auto;
@@ -316,7 +318,7 @@ section {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin-top:100px;
+      margin-top:50px;
       .time-box {
         display: flex;
         flex-direction: column;
@@ -347,16 +349,9 @@ section {
   }
   > img {
     position: absolute;
-    width: 250px;
-    &:nth-child(1) {
-      bottom: -75px;
-      left: -100px;
-      transform: rotate(-90deg);
-    }
-    &:nth-child(2) {
-      bottom: -75px;
-      right: -100px;
-    }
+    width: 350px;
+    bottom: 0;
+    right: 0;
   }
 }
 
@@ -777,6 +772,7 @@ section {
 
 .cover-page {
   width: 100%;
+  // height:120vh;
   display: flex;
   justify-content: center;
   background-image: url('../../public/img/couples/moments_8.webp');
@@ -791,6 +787,7 @@ section {
     position: relative;
   }
   &-content {
+    height: 200vh;
     z-index: 5 !important;
   }
   .cover {
@@ -799,8 +796,7 @@ section {
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 30vh;
-      position: relative;
+      position: relative; 
       z-index: 10 !important;
       .btn-ghost {
         text-transform: uppercase;
@@ -833,9 +829,11 @@ section {
       }
     }
     &-header {
+      
       width:100%;
       .cover-title {
         width: 100%;
+        margin-top: 35rem;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -860,17 +858,6 @@ section {
           padding-top:5px;
           padding-bottom: 5px;
         }
-      }
-    }
-    &-body {
-      height: 100vh;
-      // background-color: gray;
-      img {
-        width: 100%;
-        height: 100%;
-        // height: 150%;
-        object-fit:cover ;
-        object-position: center;
       }
     }
   }

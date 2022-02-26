@@ -43,10 +43,11 @@
 
 @media screen and (max-width: 900px) {
   .countdown {
+    min-height: 61vh !important;
     &-content {
       .countdown-timer {
         .time-box {
-          margin-top: \10px !important;
+          margin-top: 5px !important;
           margin-right: 6px;
           width: 80px;
           height: 80px;
@@ -253,13 +254,14 @@
   .cover-page {
     &-content {
       width: 100%;
+      height: 100vh;
     }
     .cover-body {
       height: 66vh;
     }
     .cover-header,
     .cover-footer {
-      height: 17.5vh;
+      height: 51.5vh;
     }
     // .cover-header {
     //   .cover-title {

@@ -45,12 +45,10 @@ const CoverPage = () => {
     <div className="cover-page">
       <div className="cover-page-overlay">
         <div className="cover-page-content">     
-          <div className="cover-body">
-          </div>
           <div className="cover-header">
             <div className="cover-title">
               {invitedName && <h6><b>Dear {invitedName}</b></h6>}
-              <h6 className="greetings">We invite you to celebrate The Wedding of</h6>
+              <h6 className="greetings">With happy hearts we invite you <br />  to celebrate the wedding of</h6>
               <h2 className="font-great-vibes">Rhesa & Oriettha</h2>
             </div>
           </div>
