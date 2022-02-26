@@ -21,7 +21,6 @@ const CoverPage = () => {
   };
 
   const handleEnterInvitation = () => {
-    console.log("Is")
     handleOpenCover(false);
     setTimeout(() => {
       handleMovePage(2);
@@ -47,7 +46,7 @@ const CoverPage = () => {
         <div className="cover-page-content">     
           <div className="cover-header">
             <div className="cover-title">
-              {invitedName && <h5 className="guest"><b>Dear {invitedName}</b></h5>}
+              {invitedName && <h5 className="guest">Dear {invitedName}</h5>}
               <h6 className="greetings">With happy hearts, we invite you <br />  to celebrate the wedding of</h6>
               <h2 className="font-great-vibes">Rhesa & Oriettha</h2>
             </div>

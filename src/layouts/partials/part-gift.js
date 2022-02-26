@@ -1,8 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Collapse } from "react-collapse";
 
 export const PartGift = () => {
   const [isOpenGift, setIsOpenGift] = useState(false);
+
+  const handleCopy = (e) => {
+      e.preventDefault();
+      
+      navigator.clipboard.writeText(e.target.innerText).then(() => {
+        console.log("OK")
+        alert ("OK")
+      }).catch((error) => {
+        console.log("error", error.message);
+        alert(error.message)
+      })
+  }
+
 
   return (
     <section id="gift" className="gift">
@@ -29,17 +42,19 @@ export const PartGift = () => {
             <div className="bank-list">
               <div className="bank-list-items">
                 <img src="img/icons/bank-mandiri.webp" />
-                <p>
+                <p onClick={handleCopy}>
                   9000023105670
-                  <br />
+                </p>
+                  <p>
                   a.n. Rhesa Daiva Bremana
                 </p>
               </div>
               <div className="bank-list-items">
                 <img src="img/icons/bank-bni.webp" />
-                <p>
+                <p onClick={handleCopy}>
                   0454534219
-                  <br />
+                  </p>
+                  <p>
                   a.n. Oriettha Deany
                 </p>
               </div>
@@ -50,3 +65,4 @@ export const PartGift = () => {
     </section>
   );
 };
+
