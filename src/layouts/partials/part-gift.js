@@ -8,11 +8,10 @@ export const PartGift = () => {
       e.preventDefault();
       
       navigator.clipboard.writeText(e.target.innerText).then(() => {
-        console.log("OK")
-        alert ("OK")
+        console.log('OK')
       }).catch((error) => {
         console.log("error", error.message);
-        alert(error.message)
+        // alert(error.message)
       })
   }
 
