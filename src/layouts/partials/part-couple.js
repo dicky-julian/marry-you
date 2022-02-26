@@ -14,7 +14,7 @@ export const PartCouple = () => {
           <img className="img-figure" src="img/section-2.webp" />
           <img
             className="couples-profile-pict"
-            src="img/couples/cardsGroomrounded.webp"
+            src="img/couples/cardGroomrounded.webp"
           />
           <h5 className="font-cormorant">Rhesa Daiva Bremana</h5>
           <p className="font-fade">
@@ -36,7 +36,7 @@ export const PartCouple = () => {
           <img className="img-figure" src="img/section-2.webp" />
           <img
             className="couples-profile-pict"
-            src="img/couples/cardsBriderounded.webp"
+            src="img/couples/cardBriderounded.webp"
           />
           <h5 className="font-cormorant">Oriettha Deany</h5>
           <p className="font-fade">

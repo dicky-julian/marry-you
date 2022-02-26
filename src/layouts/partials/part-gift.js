@@ -43,7 +43,7 @@ export const PartGift = () => {
                   <br />
                   a.n. Rhesa Daiva Bremana
                 </p>
-                 <button className="btn btn-primary" onClick={()=>{handleCopy('9000023105670')}}>Copy Text</button>
+                 <button className="btn btn-primary" onClick={()=>{handleCopy('9000023105670')}}>Copy Number</button>
               </div>
               <div className="bank-list-items">
                 <img src="img/icons/bank-bni.webp" />
@@ -52,7 +52,7 @@ export const PartGift = () => {
                   <br />
                   a.n. Oriettha Deany
                 </p>
-                <button className="btn btn-primary" onClick={()=>{handleCopy('0454534219')}}>Copy Text</button>
+                <button className="btn btn-primary" onClick={()=>{handleCopy('0454534219')}}>Copy Number</button>
               </div>
             </div>
           </Collapse>
