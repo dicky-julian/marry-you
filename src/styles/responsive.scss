@@ -321,7 +321,7 @@
         font-size: 2rem;
       }
       h3 {
-        margin-top: 25vh;
+        margin-top: 31vh;
       }
     }
   }
@@ -399,6 +399,18 @@
   .react-tabs {
     &__tab-panel {
       height: 400px;
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .gift {
+    .bank-list {
+      &-items {
+        p {
+          font-size: 0.98rem;
+        }
+      }
     }
   }
 }
