@@ -16,7 +16,7 @@ const useAudio = (url) => {
   useEffect(() => {
     audio.addEventListener("ended", () => setPlaying(true));
     window.addEventListener("touchstart", () => {
-      audio.play()
+      playing && audio.play();
     }, {passive: true})
     return () => {
       audio.removeEventListener("ended", () => setPlaying(false));
