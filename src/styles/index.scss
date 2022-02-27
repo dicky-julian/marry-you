@@ -566,8 +566,12 @@ section {
     padding: 10px 0;
     &-items {
       .btn {
-        padding: 0.5rem 0.5rem !important;
-        font-size: 1rem;
+        // padding: 0.5rem 0.5rem !important;
+        h3 {
+          font-size: 17px !important;
+          font-weight: 400;
+          margin: 0;
+        }
       }
       width: 50%;
       text-align: center;

@@ -1,34 +1,44 @@
 import React, { useEffect, useState } from "react";
+// import audioFile from '/audio/audio_2.mp3'
+import audioFile from '../../../assets/audio/audio_2.mp3';
 
-const useAudio = (url) => {
 
-  const [audio] = useState(new Audio(url));
-  const [playing, setPlaying] = useState(true);
+// const useAudio = () => {
 
-  audio.autoplay = true
+//   const [audio] = useState(new Audio(url));
+//   const [playing, setPlaying] = useState(false);
 
-  const toggle = () => setPlaying(!playing);
+//   const toggle = () => setPlaying(!playing);
 
-  useEffect(() => {
-    playing ? audio.play() : audio.pause() 
-  }, [playing]);
+//   useEffect(() => {
+//     playing ? audio.play() : audio.pause() 
 
-  useEffect(() => {
-    audio.addEventListener("ended", () => setPlaying(true));
-    // window.addEventListener('touchstart', () => {
-    //   audio.play()
-    // })
-    return () => {
-      audio.removeEventListener("ended", () => setPlaying(false));
-    };
-  }, []);
+//     if (audio.current?.paused && audio.current?.currentTime > 0 && audio.current?.ended) {
+//       audio.current?.play();
+//     } else if (audio.current?.ended) {
+//       audio.current?.play();
+//     } else {
+//       audio.current?.pause();
+//     }
+//   }, [playing, audio]);
 
-  return [playing, toggle];
-};
+//   useEffect(() => {
+//     audio.addEventListener("ended", () => setPlaying(true));
+//     return () => {
+//       audio.removeEventListener("ended", () => setPlaying(false));
+//     };
+//   }, [audio]);
+
+//   return [playing, toggle];
+// };
 
 export const Navbar = () => {
   const [indexScroll, setIndexScroll] = useState(1);
-  const [playing, toggle] = useAudio("/audio/audio_2.mp3");
+  const [playAudio, setPlayAudio] = useState(false);
+
+  const [audio] = useState(new Audio(audioFile));
+
+  const toggle = () => setPlayAudio(!playAudio);
 
   const handleScroll = () => {
     setIndexScroll(window.pageYOffset);
@@ -38,6 +48,25 @@ export const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   });
+
+  useEffect(() => {
+     playAudio ? audio.play() : audio.pause();
+     
+     if (audio.current?.paused && audio.current?.currentTime > 0  && audio.current?.ended) {
+        audio.current?.play();
+     } else if (audio.current?.ended) {
+       audio.current?.play();
+     } else {
+       audio.current?.pause();
+     }
+  }, [playAudio, audio]);
+
+  useEffect(() => {
+    audio.addEventListener("ended", () => playAudio(true));
+    return () => {
+      audio.removeEventListener("ended", () => playAudio(false));
+    };
+  }, [audio]);
 
   return (
     <>
@@ -63,7 +92,7 @@ export const Navbar = () => {
         className={`toggle-audio ${indexScroll > 64 ? "active" : ""}`}
         onClick={toggle}
       >
-        {playing ? (
+        {playAudio ? (
           <img src="img/icons/icon-stop.webp" />
         ) : (
           <img src="img/icons/icon-play.webp" />
