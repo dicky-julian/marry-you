@@ -360,7 +360,7 @@ section {
   background-color: #fff;
   .img-figure {
     position: absolute;
-    width: 350px;
+    width: 270px;
     bottom: 0;
     right: 0;
   }
@@ -840,18 +840,18 @@ section {
         justify-content: center;
         text-align: center;
         h2 {
-          margin-top: 0.5rem;
           font-size: 3.5rem;
           font-weight: 400;
           letter-spacing: 3px;
           color:white;
-          padding-bottom:25px
+          margin-block-end: 0;
+          margin-block-start: 0;
         }
         h5 {
           margin: 0.5rem 0 0;
+          padding-bottom:1.5rem;
           font-size: 1.75rem;
           color: #ffffff;
-          padding-bottom: 1.5rem;
           font-weight: 700;
           // font-family: 'Roboto', sans-serif;
           @extend .font-cormorant;
@@ -862,7 +862,7 @@ section {
         }
         h6.greetings {
           padding-top:5px;
-          padding-bottom: 5px;
+          padding-bottom: 1.5rem;
           font-size: 1.6rem;
           @extend .font-cormorant;
         }
@@ -1025,13 +1025,14 @@ section {
   position: relative;
   overflow: hidden;
   background-color: $bg-primary;
-  height: 120px !important;
+  height: 8vh !important;
   width: 100%;
   h5 {
     display: flex;
     margin-block-start: 10px;
     justify-content: center;
     flex-wrap: wrap;
+    font-size: 1rem;
     // align-self: flex-start;
   }
   .creator {
