@@ -34,9 +34,11 @@ import audioFile from '../../../assets/audio/audio_2.mp3';
 
 export const Navbar = () => {
   const [indexScroll, setIndexScroll] = useState(1);
-  const [playAudio, setPlayAudio] = useState(false);
+  const [playAudio, setPlayAudio] = useState(true);
 
   const [audio] = useState(new Audio(audioFile));
+
+  audio.autoplay = true;
 
   const toggle = () => setPlayAudio(!playAudio);
 
@@ -62,9 +64,9 @@ export const Navbar = () => {
   }, [playAudio, audio]);
 
   useEffect(() => {
-    audio.addEventListener("ended", () => playAudio(true));
+    audio.addEventListener("ended", () => setPlayAudio(true));
     return () => {
-      audio.removeEventListener("ended", () => playAudio(false));
+      audio.removeEventListener("ended", () => setPlayAudio(false));
     };
   }, [audio]);
 
