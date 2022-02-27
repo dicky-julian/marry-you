@@ -1029,19 +1029,19 @@ section {
   position: relative;
   overflow: hidden;
   background-color: $bg-primary;
-  height: 8vh !important;
+  height: 6vh !important;
   width: 100%;
   h5 {
     display: flex;
     margin-block-start: 10px;
     justify-content: center;
     flex-wrap: wrap;
-    font-size: 1rem;
+    font-size: 0.8rem;
     // align-self: flex-start;
   }
   .creator {
     display: flex;
-    margin-top:-35px;
+    margin-top:-30px;
     justify-content: center;
     a {
       display: block;
