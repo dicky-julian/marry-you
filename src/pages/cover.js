@@ -34,11 +34,11 @@ const CoverPage = () => {
   const { dispatch } = React.useContext(PageContext);
 
   const handleOpenCover = (isOpen) => {
-    audio.play();
     dispatch({
       type: actionTypes.SET_OPEN_COVER,
       payload: isOpen,
     });
+    audio.play();
   };
 
   const handleMovePage = (indexPage) => {
@@ -56,6 +56,7 @@ const CoverPage = () => {
     setTimeout(() => {
       handleOpenCover(true);
     }, 1500);
+
   };
 
   const onMountCover = () => {
