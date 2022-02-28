@@ -2,9 +2,6 @@ import React from "react";
 import Slider from "react-slick";
 import { PageContext } from "../../../pages";
 
-import CountdownTimer from "./CountdownTimer";
-
-
 const settings = {
   infinite: true,
   speed: 3000,
