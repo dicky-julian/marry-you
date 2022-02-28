@@ -49,19 +49,19 @@ const CoverPage = () => {
 
   const handleEnterInvitation = () => {
     handleOpenCover(false);
+    audio.play();
     setTimeout(() => {
       handleMovePage(2);
-    }, 2000);
+    }, 1000);
     setTimeout(() => {
       handleOpenCover(true);
-      audio.play();
-    }, 2500);
+    }, 1500);
   };
 
   const onMountCover = () => {
     setTimeout(() => {
       handleOpenCover(true);
-    }, 1500);
+    }, 1000);
   };
 
   React.useEffect(() => {
