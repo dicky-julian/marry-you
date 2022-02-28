@@ -49,12 +49,12 @@ const CoverPage = () => {
 
   const handleEnterInvitation = () => {
     handleOpenCover(false);
-    audio.play();
     setTimeout(() => {
       handleMovePage(2);
     }, 2000);
     setTimeout(() => {
       handleOpenCover(true);
+      audio.play();
     }, 2500);
   };
 
