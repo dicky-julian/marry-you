@@ -34,6 +34,7 @@ const CoverPage = () => {
   const { dispatch } = React.useContext(PageContext);
 
   const handleOpenCover = (isOpen) => {
+    audio.play();
     dispatch({
       type: actionTypes.SET_OPEN_COVER,
       payload: isOpen,
@@ -54,7 +55,6 @@ const CoverPage = () => {
     }, 1000);
     setTimeout(() => {
       handleOpenCover(true);
-      audio.play();
     }, 1500);
   };
 
