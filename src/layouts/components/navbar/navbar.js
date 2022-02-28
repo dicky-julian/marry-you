@@ -35,7 +35,7 @@ export const Navbar = () => {
 
   useEffect(() => {
 
-    playAudio ? audio.play() : audio.pause();
+    // playAudio ? audio.play() : audio.pause();
     audio.loop = true
 
     if (audio.current?.paused && audio.current?.currentTime > 0 && audio.current?.ended) {
