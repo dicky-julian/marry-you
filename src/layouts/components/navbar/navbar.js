@@ -17,6 +17,22 @@ export const Navbar = () => {
     cover ? setPlayAudio(true) : setPlayAudio(false);
   };
 
+  const unblockAudio = () => {
+    const audio = new Audio("/audio/audio_2.mp3");
+
+    audio.play();
+    audio.pause();
+    audio.currnetTime = 0;
+
+    document.body.removeEventListener("click", unblockAudio);
+    document.body.removeEventListener("touchstart", unblockAudio);
+  }
+
+  useEffect(() => {
+    document.addEventListener("click", unblockAudio);
+    document.addEventListener("touchstart", unblockAudio);
+  }, [])
+
   useEffect(() => {
 
     playAudio ? audio.play() : audio.pause();
@@ -40,6 +56,9 @@ export const Navbar = () => {
       audio.removeEventListener("ended", () => setPlayAudio(false));
     };
   }, [audio]);
+
+
+
 
   useEffect(() => {
     handleAudioWhenOpenCover(isOpenCover);
