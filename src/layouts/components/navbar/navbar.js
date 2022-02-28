@@ -1,31 +1,31 @@
 import React, { useEffect, useState } from "react";
+import { BrowserDetection } from "../../../config/browser-detection";
 
 const useAudio = (url) => {
 
   const [audio] = useState(new Audio(url));
-  const [playing, setPlaying] = useState(true);
-
-  // audio.autoplay = true
+  const [playing, setPlaying] = useState(false);
 
   const toggle = () => setPlaying(!playing);
 
   useEffect(() => {
+    console.log("Playing status: ", playing);
     playing ? audio.play() : audio.pause() 
-  }, [playing]);
+  }, [playing, audio]);
 
   useEffect(() => {
+    // Check browser compatibility, if safari, sound must be played manually;
+    if(BrowserDetection(window.navigator.userAgent) === "Apple Safari") {
+      setPlaying(false);
+    } else {
+      setPlaying(true);
+    };
+
     audio.addEventListener("ended", () => setPlaying(true));
-    window.addEventListener("touchstart", () => {
-      playing && audio.play();
-    }, {passive: true})
     return () => {
       audio.removeEventListener("ended", () => setPlaying(false));
-      audio.removeEventListener("touchstart",(() =>{
-        audio.pause();
-        console.log("touchstart event removed!")
-      }))
     };
-  }, []);
+  }, [audio]);
 
   return [playing, toggle];
 };
@@ -33,7 +33,6 @@ const useAudio = (url) => {
 export const Navbar = () => {
   const [indexScroll, setIndexScroll] = useState(1);
   const [playing, toggle] = useAudio("/audio/audio_2.mp3");
-
   const handleScroll = () => {
     setIndexScroll(window.pageYOffset);
   };
@@ -47,30 +46,30 @@ export const Navbar = () => {
     <>
       <nav className={`navbar ${indexScroll > 64 ? "navbar--active" : ""}`}>
         <a href="#couples" className="nav-link">
-          <img src="img/icons/icon-wedding.webp" />
+          <img src="img/icons/icon-wedding.webp" alt="icon-wedding" />
           <span>Couples</span>
         </a>
         <a href="#events" className="nav-link">
-          <img src="img/icons/icon-calendar.png" />
+          <img src="img/icons/icon-calendar.png" alt="icon-calendar" />
           <span>Events</span>
         </a>
         <a href="#moments" className="nav-link">
-          <img src="img/icons/icon-album.webp" />
+          <img src="img/icons/icon-album.webp" alt="icon-album" />
           <span>Moments</span>
         </a>
         <a href="#wishes" className="nav-link">
-          <img src="img/icons/icon-wish.webp" />
+          <img src="img/icons/icon-wish.webp" alt="icon-wish" />
           <span>Wishes</span>
         </a>
       </nav>
       <div
         className={`toggle-audio ${indexScroll > 64 ? "active" : ""}`}
-        onClick={toggle}
+        onClickCapture={toggle}
       >
         {playing ? (
-          <img src="img/icons/icon-stop.webp" />
+          <img src="img/icons/icon-stop.webp" alt="icon-stop" />
         ) : (
-          <img src="img/icons/icon-play.webp" />
+          <img src="img/icons/icon-play.webp" alt="icon-play" />
         )}
       </div>
     </>
