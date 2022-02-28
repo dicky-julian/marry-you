@@ -11,9 +11,6 @@ const CoverPage = () => {
 
   useEffect (() => {
 
-   
-
-    playAudio ? audio.play() : audio.pause();
 
     if (audio.current?.paused && audio.current?.currentTime > 0 && audio.current?.ended) {
       audio.current?.play();
@@ -22,6 +19,8 @@ const CoverPage = () => {
     } else {
       audio.current?.pause();
     }
+    
+    // playAudio ? audio.play() : audio.pause();
   }, [playAudio, audio])
 
   useEffect(() => {
@@ -50,11 +49,7 @@ const CoverPage = () => {
 
   const handleEnterInvitation = () => {
     handleOpenCover(false);
-    
-    setTimeout(() => {
-      setPlayAudio(true);
-    }, 1500)
-
+    audio.play();
     setTimeout(() => {
       handleMovePage(2);
     }, 2000);

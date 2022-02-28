@@ -34,17 +34,6 @@ export const Navbar = () => {
           <span>Wishes</span>
         </a>
       </nav>
-      {/* <div ref={buttonRef}
-        className={`toggle-audio ${indexScroll > 64 ? "active" : ""}`}
-        onClick={toggle}
-
-      >
-        {playAudio ? (
-          <img src="img/icons/icon-stop.webp" alt="icon-stop" />
-        ) : (
-          <img src="img/icons/icon-play.webp" alt="icon-play" />
-        )}
-      </div> */}
     </>
   );
 };
