@@ -1,16 +1,17 @@
 import React, {useState, useEffect} from "react";
 import { PageContext } from "./index";
 import { actionTypes } from "../config/store";
+import { adjustVolume } from "../config/adjust-volume";
 
 const CoverPage = () => {
 
   const [playAudio, setPlayAudio] = useState(false);
-
   const [audio] = useState(new Audio('/audio/audio_2.mp3'));
 
+  // Set Volume
+  audio.volume = 0.2
 
   useEffect (() => {
-
 
     if (audio.current?.paused && audio.current?.currentTime > 0 && audio.current?.ended) {
       audio.current?.play();
@@ -20,13 +21,12 @@ const CoverPage = () => {
       audio.current?.pause();
     }
     
-    // playAudio ? audio.play() : audio.pause();
   }, [playAudio, audio])
 
   useEffect(() => {
-    audio.addEventListener("ended", () => setPlayAudio(true));
+    audio.addEventListener("ended", () => setPlayAudio(true), {passive: true});
     return () => {
-      audio.removeEventListener("ended", () => setPlayAudio(false));
+      audio.removeEventListener("ended", () => setPlayAudio(false), {passive: true});
     };
   }, [audio]);
 
@@ -38,7 +38,6 @@ const CoverPage = () => {
       type: actionTypes.SET_OPEN_COVER,
       payload: isOpen,
     });
-    audio.play();
   };
 
   const handleMovePage = (indexPage) => {
@@ -56,7 +55,11 @@ const CoverPage = () => {
     setTimeout(() => {
       handleOpenCover(true);
     }, 1500);
-
+    audio.play();
+    setTimeout(() => {
+      console.log('start adjust volume')
+      adjustVolume(audio, 1).then(() => { console.log('Adjusting volume' )})
+    }, 5000)
   };
 
   const onMountCover = () => {
