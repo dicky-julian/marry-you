@@ -55,8 +55,8 @@ const CoverPage = () => {
     setTimeout(() => {
       handleOpenCover(true);
     }, 1500);
+    audio.play();
     setTimeout(() => {
-      audio.play();
       console.log('start adjust volume')
       adjustVolume(audio, 1).then(() => { console.log('Adjusting volume' )})
     }, 2000)
