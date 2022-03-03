@@ -30,7 +30,11 @@ const CoverPage = () => {
     };
   }, [audio]);
 
-  const invitedName = window.location.search?.slice(4)?.replaceAll("%20", " ");
+  // const invitedName = window.location.search?.slice(4)?.replaceAll("%20", " ");
+
+  const params = new URLSearchParams(window.location.search);
+  const invitedName = params.get("to");
+
   const { dispatch } = React.useContext(PageContext);
 
   const handleOpenCover = (isOpen) => {
