@@ -10,7 +10,7 @@ export const adjustVolume = (sound, newVolume) => {
     return 0.5 - Math.cos(p * Math.PI) / 2;
     }
 
-    let duration = 10000;
+    let duration = 12000;
     let easing = swing;
     let interval = 5;
 
@@ -28,7 +28,9 @@ export const adjustVolume = (sound, newVolume) => {
                 easing(tick / ticks) * delta
             );
 
-            if (++tick === ticks + 1 || sound.volume > 0.95) {
+            console.log(sound.volume,'volume')
+
+            if (++tick === ticks + 1 || sound.volume > 0.8) {
                 clearInterval(timer);
                 resolve();
             }
