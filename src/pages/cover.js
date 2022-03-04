@@ -9,7 +9,7 @@ const CoverPage = () => {
   const [audio] = useState(new Audio('/audio/audio_2.mp3'));
 
   // Set Volume
-  audio.volume = 0.5
+  audio.volume = 0.08;
 
   useEffect (() => {
 
@@ -60,6 +60,7 @@ const CoverPage = () => {
       handleOpenCover(true);
     }, 1500);
     audio.play();
+    console.log(audio.volume, 'volume')
     // setTimeout(() => {
     //   console.log('start adjust volume')
     //   adjustVolume(audio, 1).then(() => { console.log('Adjusting volume' )})

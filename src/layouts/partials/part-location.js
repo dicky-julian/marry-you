@@ -19,10 +19,6 @@ export const PartLocation = () => {
     });
   };
 
-  React.useEffect(() => {
-    console.log(indexLocation, "indexLocation");
-  }, [indexLocation]);
-
   return (
     <section id="locations" className="locations">
       <div className="locations-content">
