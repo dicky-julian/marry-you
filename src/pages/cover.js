@@ -9,7 +9,7 @@ const CoverPage = () => {
   const [audio] = useState(new Audio('/audio/audio_2.mp3'));
 
   // Set Volume
-  audio.volume = 0.75
+  audio.volume = 0.5
 
   useEffect (() => {
 
