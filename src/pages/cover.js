@@ -2,33 +2,45 @@ import React, {useState, useEffect} from "react";
 import { PageContext } from "./index";
 import { actionTypes } from "../config/store";
 import { adjustVolume } from "../config/adjust-volume";
+import {Howl, Howler} from 'howler';
 
 const CoverPage = () => {
 
-  const [playAudio, setPlayAudio] = useState(false);
-  const [audio] = useState(new Audio('/audio/audio_2.mp3'));
+  const sound = new Howl({
+    src: ["/audio/audio_2.mp3"],
+    volume: 0.08,
+    loop: true
+  });
+
+  // const [playAudio, setPlayAudio] = useState(false);
+  // const [audio] = useState(new Audio('/audio/audio_3.mp3'));
+
+  // const [audio] = useState(sound);
 
   // Set Volume
-  audio.volume = 0.08;
+  // audio.volume = 0.08;
 
-  useEffect (() => {
+  // useEffect (() => {
 
-    if (audio.current?.paused && audio.current?.currentTime > 0 && audio.current?.ended) {
-      audio.current?.play();
-    } else if (audio.current?.ended) {
-      audio.current?.play();
-    } else {
-      audio.current?.pause();
-    }
+    // if (audio.current?.paused && audio.current?.currentTime > 0 && audio.current?.ended) {
+    //   audio.current?.play();
+    // } else if (audio.current?.ended) {
+    //   audio.current?.play();
+    // } else {
+    //   audio.current?.pause();
+    // }
     
-  }, [playAudio, audio])
+  // }, [playAudio, audio])
 
-  useEffect(() => {
-    audio.addEventListener("ended", () => setPlayAudio(true), {passive: true});
-    return () => {
-      audio.removeEventListener("ended", () => setPlayAudio(false), {passive: true});
-    };
-  }, [audio]);
+  // useEffect(() => {
+  //   // sound.addEventListener("ended", () => setPlayAudio(true), {passive: true});
+
+  //   sound.on("end",)
+
+  //   return () => {
+  //     sound.removeEventListener("ended", () => setPlayAudio(false), {passive: true});
+  //   };
+  // }, [sound]);
 
   // const invitedName = window.location.search?.slice(4)?.replaceAll("%20", " ");
 
@@ -59,8 +71,8 @@ const CoverPage = () => {
     setTimeout(() => {
       handleOpenCover(true);
     }, 1500);
-    audio.play();
-    console.log(audio.volume, 'volume')
+    sound.play();
+    // console.log(audio.volume, 'volume')
     // setTimeout(() => {
     //   console.log('start adjust volume')
     //   adjustVolume(audio, 1).then(() => { console.log('Adjusting volume' )})
