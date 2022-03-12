@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { BrowserDetection } from "../../../config/browser-detection";
-// import audioFile from "../../../assets/audio/audio_2.mp3";
 
 export const Navbar = () => {
   const [indexScroll, setIndexScroll] = useState(1);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, {passive: true});
+    return () => window.removeEventListener("scroll", handleScroll, {passive: true});
   });
 
   const handleScroll = () => {

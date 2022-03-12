@@ -22,9 +22,9 @@ const App = () => {
 
   useEffect(() => {
     handleChangeOrientation();
-    window.addEventListener("resize", handleChangeOrientation);
+    window.addEventListener("resize", handleChangeOrientation, {passive: true});
     return () => {
-      window.removeEventListener("resize", handleChangeOrientation);
+      window.removeEventListener("resize", handleChangeOrientation, {passive: true});
     };
   }, []);
 
