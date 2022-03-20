@@ -18,7 +18,7 @@ export const PartCouple = () => {
           />
           <h5 className="font-cormorant">Rhesa Daiva Bremana</h5>
           <p className="font-fade">
-            Putra pertama dari Bpk. A. Ginting & Ibu E. br. Sembiring
+            Putra pertama dari Bpk. Asmat Ginting & Ibu Emirita br. Sembiring
           </p>
         </div>
         <div className="couples-intro">
@@ -40,7 +40,7 @@ export const PartCouple = () => {
           />
           <h5 className="font-cormorant">Oriettha Deany</h5>
           <p className="font-fade">
-            Putri ketiga dari Bpk. E. Lumbantoruan & Ibu B. br. Sinaga
+            Putri ketiga dari Bpk. Edison Lumbantoruan & Ibu Basaria br. Sinaga
           </p>
         </div>
       </div>
