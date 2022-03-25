@@ -16,7 +16,7 @@ export const PartCouple = () => {
             className="couples-profile-pict"
             src="img/couples/cardGroomrounded.webp"
           />
-          <h5 className="font-cormorant">Rhesa Daiva Bremana</h5>
+          <h5 className="font-cormorant">Rhesa Daiva Bremana Ginting</h5>
           <p className="font-fade">
             Putra pertama dari Bpk. Asmat Ginting & Ibu Emirita br. Sembiring
           </p>
@@ -38,7 +38,7 @@ export const PartCouple = () => {
             className="couples-profile-pict"
             src="img/couples/cardBriderounded.webp"
           />
-          <h5 className="font-cormorant">Oriettha Deany</h5>
+          <h5 className="font-cormorant">Oriettha Deany br. Lumbantoruan</h5>
           <p className="font-fade">
             Putri ketiga dari Bpk. Edison Lumbantoruan & Ibu Basaria br. Sinaga
           </p>
